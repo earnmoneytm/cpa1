@@ -1,29 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>CPA 1</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CPA 1</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  .btn {
+    background: linear-gradient(135deg, #ff004f, #ff6a00);
+    color: white;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff004f;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s ease;
+    margin-top: 30px;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 20px #ff004f; }
+    50% { box-shadow: 0 0 40px #ff6a00; }
+    100% { box-shadow: 0 0 20px #ff004f; }
+  }
+  .ad-container {
+    margin-top: 20px;
+  }
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9VLD02NMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-H9VLD02NMS');
+</script>
 </head>
 <body>
 
-  <!-- Native Banner -->
-  <script async="async" data-cfasync="false" src="//pl26083326.profitableratecpm.com/83c58e3a31759dc95349030a8a84ebd5/invoke.js"></script>
-  <div id="container-83c58e3a31759dc95349030a8a84ebd5"></div>
+  <div class="ad-container">
+    <!-- Native Banner -->
+    <script async="async" data-cfasync="false" src="//pl26083326.profitableratecpm.com/83c58e3a31759dc95349030a8a84ebd5/invoke.js"></script>
+    <div id="container-83c58e3a31759dc95349030a8a84ebd5"></div>
+  </div>
 
-  <!-- Banner -->
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'cfe6fc7c68e3318c0e552c6c6312c209',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
+  <div class="ad-container">
+    <!-- Banner -->
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'cfe6fc7c68e3318c0e552c6c6312c209',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/cfe6fc7c68e3318c0e552c6c6312c209/invoke.js"></script>
+  </div>
+
+  <button class="btn" onclick="handleClick()">Continue</button>
+
+  <script>
+    function handleClick() {
+      if (typeof gtag === "function") {
+        gtag('event', 'click_continue', {
+          event_category: 'Engagement',
+          event_label: 'Continue Button - CPA1',
+          value: 1
+        });
+      }
+      setTimeout(() => {
+        window.location.href = "https://earnmoneytm.github.io/YourRewards/";
+      }, 200);
+    }
   </script>
-  <script type="text/javascript" src="//www.highperformanceformat.com/cfe6fc7c68e3318c0e552c6c6312c209/invoke.js"></script>
-
-  <br/><br/>
-  <button onclick="window.location.href='https://earnmoneytm.github.io/YourRewards/'" style="font-size:20px; padding:10px 20px;">Continue</button>
 
 </body>
 </html>
